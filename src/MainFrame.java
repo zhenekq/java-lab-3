@@ -1,17 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.datatransfer.Clipboard;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.font.TextAttribute;
-import java.awt.im.InputMethodHighlight;
-import java.awt.image.ColorModel;
-import java.awt.image.ImageObserver;
-import java.awt.image.ImageProducer;
-import java.net.URL;
-import java.util.Map;
-import java.util.Properties;
-import java.util.concurrent.ExecutionException;
 
 public class MainFrame extends JFrame {
     private static final int WIDTH = 300;
@@ -55,6 +45,7 @@ public class MainFrame extends JFrame {
         hBoxPValue.add(Box.createHorizontalStrut(35));
         hBoxPValue.add(Box.createHorizontalGlue());
         hBoxPValue.add(new JLabel("P: "));
+        hBoxPValue.add(Box.createVerticalGlue());
         hBoxPValue.add(Box.createHorizontalStrut(5));
         hBoxPValue.add(textFieldP);
         hBoxPValue.add(Box.createHorizontalGlue());
@@ -62,10 +53,8 @@ public class MainFrame extends JFrame {
         hBoxPValue.add(hBoxPValueButtons);
         hBoxPValue.add(Box.createHorizontalStrut(40));
         hBoxPValue.add(Box.createHorizontalGlue());
-
         hBoxPValue.setMaximumSize(new Dimension(hBoxPValue.getMaximumSize().width,
                 hBoxPValue.getPreferredSize().height));
-
         Box hBoxPValueUnder = Box.createHorizontalBox();
         hBoxPValueUnder.add(Box.createHorizontalGlue());
 
@@ -149,9 +138,12 @@ public class MainFrame extends JFrame {
         vBoxPFunction.add(Box.createVerticalStrut(10));
         vBoxPFunction.add(Box.createHorizontalGlue());
         vBoxPFunction.add(hBoxPValue);
+        vBoxPFunction.add(Box.createHorizontalGlue());
         vBoxPFunction.add(Box.createHorizontalStrut(0));
         vBoxPFunction.add(Box.createVerticalStrut(10));
         vBoxPFunction.add(hBoxPValueUnder);
+        vBoxPFunction.add(Box.createHorizontalGlue());
+        vBoxPFunction.add(Box.createVerticalGlue());
         vBoxPFunction.add(Box.createVerticalStrut(10));
 
 
